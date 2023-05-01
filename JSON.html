@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>JSON Form</title>
+        <script>
+            /*
+            var classmatesObject = {
+                "classmate":[{"name":"Danielle","class":"English","time":"3"},
+                {"name":"Olivia","class":"Economy","time":"1"},
+                {"name":"Jason","class":"Government","time":"2"},
+                {"name":"Shriya","class":"Advisory","time":"4"}]
+            }
+            */
+
+            var Friend = new Object();
+            Friend.name = "Danielle";
+            Friend.age = 18;
+            Friend.favoriteColor = "green";
+            Friend.borrowedBooks = ["The Catcher in the Rye", "Math Textbook", "Harry Potter", "Percy Jackson"]
+        </script>
+    </header>
+    <body>
+        <script>
+            alert(JSON.stringify(Friend));
+        </script>   
+    </body>
+</html>

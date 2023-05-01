@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html> 
+    <head>    
+        <title>Spam Detector</title> 
+    </head> 
+    <body> 
+        <script>    
+            function detectSpam(input) {       
+                input = input.toLowerCase();       
+                return input.indexOf("fake");    
+            }  
+
+            var mystring = prompt("Enter the email subject");    
+            alert(detectSpam(mystring));
+    
+            if (detectSpam(mystring) != -1) {
+                alert("This email is spam!!");
+            } else {
+                alert("This email is safe");
+            }
+
+
+
+            function howMany(emails) {
+                if(isNaN(emails) == false) {
+                    return emails;
+                } if (isNaN(emails) == true){
+                    return "Not an acceptable number";
+                }
+            }
+
+            var myint = prompt("How many emails did you receive \n from this sender?")
+            var number = parseFloat(myint);
+            alert(howMany(number));
+            if (number >= 5) {
+                alert("This sender is a spammer! Please block them")
+            }if (number< 5) {
+                alert("This sender is probably ok. If emailing continues, block them!")
+            }
+        </script> 
+    </body> 
+</html>

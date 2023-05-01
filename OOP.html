@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object Oriented Programming </title>
+    <script>
+        function Card(suit, face){
+            this.suit = suit;
+            this.setSuit = function(newSuit) {
+                this.suit = newSuit;
+            }
+        
+            this.face = face;
+            this.setFace = function(newFace) {
+                this.face = newFace;
+            }
+            this.showInfo = function(){
+                alert("This card is a(n) " + this.face + " of " + this.suit);
+            }
+        }
+    </script>
+    <body>
+        <script>
+            var card1 = new Card();
+            card1.setSuit("Diamonds");
+            card1.setFace("2");
+
+            var card2 = new Card();
+            card2.setSuit("Spades")
+            card2.setFace("Ace")
+
+            var card3 = new Card();
+            card3.setSuit("Clubs")
+            card3.setFace("King")
+
+            var card4 = new Card();
+            card4.setSuit("Hearts")
+            card4.setFace("Queen")
+        </script>
+
+        <input type = "button" value="Turn over card 1" onclick="card1.showInfo()"/>
+        <input type = "button" value="Turn over card 2" onclick="card2.showInfo()"/>
+        <input type = "button" value="Turn over card 3" onclick="card3.showInfo()"/>
+        <input type = "button" value="Turn over card 4" onclick="card4.showInfo()"/>
+    </body>
+</html>
