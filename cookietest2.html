@@ -5,7 +5,12 @@
         <script src="cookies.js"></script>    
         <script>        
             window.onload = function() {            
-                document.getElementById("output").innerHTML = "Your cookie value: " + getCookie("myCookieData");        
+                var myUser = getCookie("myCookieData");
+                var myUserArray = myUser.split('#');
+                var name = myUserArray[0];
+                var age = myUserArray[1];
+                var password = myUserArray[2];
+                document.getElementById("output").innerHTML = "User Info:" + "<br>" + name + "<br>" + age + "<br>" + password;
             }    
         </script> 
     </head> 

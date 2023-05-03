@@ -5,8 +5,11 @@
         <script src="cookies.js"></script>    
         <script>        
             window.onload = function() {            
-                var cookievalue = prompt("Cookie Value:");            
-                createCookie("myCookieData", cookievalue);        
+                var name = prompt("Name:");
+                var age = prompt("Age:");
+                var password = prompt("Password:");
+                var cookievalue = name + "#" + age + "#" + password;
+                createCookie("myCookieData", cookievalue);   
             }    
         </script> 
     </head> 
