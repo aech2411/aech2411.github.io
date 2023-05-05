@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To-Do List</title>
+        <script>
+            function countListItems() {//This is my first comment
+            var olElement = document.getElementById("toDoList");//for this lab
+            var listItems = olElement.getElementsByTagName("li");//I wonder if this is only seen
+            alert("The ordered list contains " + listItems.length + " items");
+            }//when using the developers tools on google chrome
+            /*This is for week 3 lab 11
+            node class chapter
+            this is my last comment
+            */
+            
+            //find comments function
+            /*
+            function findComments(){
+                alert("debug1");
+                var list = document.body.childNodes;
+                var node = document.body.firstChild;
+                var currentString ="";
+                
+                function sortTheNodes(node){
+                    alert("debug3, " + node);
+                    var tempString = "";
+                    if (node.nodeType == node.COMMENT_NODE){
+
+                        
+                        alert("debug4");
+                        tempString += node + "<br />";
+                    }
+                    return tempString;
+                }
+                alert("debug2");
+                currentString += list.forEach(sortTheNodes(node));
+                alert(currentString);
+            }    
+
+*/
+
+
+            function huntComments (){
+                //alert("debug1");
+                var list = document.getElementsByTagName("body")[0].childNodes;
+                var currentString ="";
+
+                for (var i = 0; i < list.length; i++){
+                    //alert("debug2");
+                    let current = list[i];
+                    //alert("debug4 " + list[i].nodeType);
+                    if(current.nodeType == Node.COMMENT_NODE){
+                        //alert("debug3");
+                        currentString += current.nodeValue + "\n";
+                    }
+                }
+                 alert (currentString);
+            }
+            window.onload = countListItems;
+        </script>
+    </head>
+    <body>
+        <!--Here is my program!-->
+        <h1>Things To Do</h1>
+        <!--Welcome to the show!-->
+        <ol id="toDoList">
+            <li>Mow the lawn</li>
+            <li>Clean the windows</li>
+            <li>Answer your email</li> 
+        </ol>
+        <!--This code was sooo cool-->
+        <!--Ta-Da!!!-->
+        <button onclick="huntComments();">List all comments</button>
+        <p id="toDoNotes">Make sure all these are completed by 8pm so you can watch the game on TV!</p>
+    </body>
+</html>

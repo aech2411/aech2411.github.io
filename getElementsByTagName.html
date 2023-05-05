@@ -1,7 +1,5 @@
 <!DOCTYPE html> 
 <html> 
-    //This program is designed to test out our getElementsByTag feature!
-    //to be used along with HTMLcommentFinder() function
     <head>    
         <title>To-Do List</title>    
         <script>        
@@ -11,33 +9,67 @@
                 alert("The ordered list contains " + listItems.length + " items");        
             }        
             window.onload = countListItems;    
-        </script> 
-        <script>
-    
-            function HTMLcommentFinder () {
-                const node = document.documentElement.childNodes;
-                document.getElementById("debug1").innerHTML = node;
-                let output = "Comments in this code: ";
-                for (let i = 0; i<nodes.length; i++){
-                    if (node.nodeType == Node.COMMENT_NODE) {
-                        output += node;
-                    }   
-                } 
-            }
-            function HTMLcommentFinder (){
-                return document.nodeType;
-            }
-            
-        </script>
+            </script> 
+            <script>
+                function HTMLcommentFinder () {
+                    const node = document.documentElement.childNodes;
+                    document.getElementById("debug1").innerHTML = node;
+                    let output = "Comments in this code: ";
+                    for (let i = 0; i<nodes.length; i++){
+                        if (node.nodeType == Node.COMMENT_NODE) {
+                            output += node;
+                        }   
+                    } 
+                }
+                function HTMLcommentFinder (){
+                    return document.nodeType;
+                }
+
+
+
+                function displayComments(){
+
+                //to concatenate all the HTML comments
+
+                var commentConcat='';
+
+                //reads the HTML comments
+
+                var x = document.evaluate('//comment()', document, null, XPathResult.ANY_TYPE, null),
+
+                //find outs the comments text in the all the HTML comments
+
+                comment = x.iterateNext();
+
+                //loop to concatenate all the HTML comments
+
+                while(comment!=null){
+
+                //concatenation of HTML comments
+
+                commentConcat=commentConcat+comment.textContent;
+
+                //moving to next comment
+
+                comment = x.iterateNext();
+
+                }
+
+                //displaying all the Comments as a single comment.
+
+                alert(commentConcat);
+
+                }
+                
+            </script>
     </head> 
     <body>    
         <h1>Things To Do</h1>    
-        <ol id="toDoList"> //will be used for getElementById  
-            <li>Mow the lawn</li> //will be used for getElementsByTagName        
+        <ol id="toDoList">        
+            <li>Mow the lawn</li>        
             <li>Clean the windows</li>        
             <li>Answer your email</li>    
         </ol>    
         <p id="toDoNotes">Make sure all these are completed by 8pm so you can watch the game on TV!</p> 
-        <div id="debug1"> mydebugger </div> 
     </body> 
 </html>
