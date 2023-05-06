@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Insert After</title>
+        <script>
+            function insertAfter(newNode, location){
+                var previous = location.parentNode;
+                var next = location.nextSibling;
+                return previous.insertBefore(newNode, next); 
+            }
+        </script>
+    </head>
+    <body>
+            <div id = "previous">
+                <p id = "text1">Text 1 is interesting.</p>
+                <p id = "text2">Text 2 is insightful.</p>
+            </div>
+
+            <button onclick="insertAfter(newText, text1)">Insert after Text 1</button>
+            <script>
+                var newText = document.createElement("div");
+                newText.innerHTML = "New text using insertAfter.";
+            </script>
+    </body>
+</html>
