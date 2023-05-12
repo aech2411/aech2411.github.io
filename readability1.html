@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html> 
+    <head>    
+        <title>Current Date and Time</title>    
+        <style>        
+        p {font: 14px normal arial, verdana, helvetica;}    
+        </style>    
+        <script src="readability2.js"></script> 
+    </head> 
+    <body>   
+        <noscript>        
+            <p>Your browser does not support JavaScript.</p>        
+            <p>Please consult your computer's operating system for local date and time information or click <a href="clock.php" target="_blank">HERE</a> to read the servertime.</p>    
+        </noscript> 
+        <div id="div2"></div>
+        <div id="div3" style="display:none">
+            <input id='btn1' type='button' value='Refresh' />
+        </div>
+        
+        <script>
+           document.getElementById("div3").style.display = "block";
+        </script>
+    </body> 
+</html>
