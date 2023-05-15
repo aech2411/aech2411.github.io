@@ -15,14 +15,12 @@ function getXMLHttpRequest() {
 function callAjax() {
     var url = "clock.php";
     var myRandom = parseInt(Math.random()*99999999);
-    var myRequest = getXMLHttpRequest(); // move this line up
     myRequest.open("GET", url + "?rand=" + myRandom, true);
     myRequest.onreadystatechange = responseAjax;
     myRequest.send(null);
 }
 
 function responseAjax() {
-    var myRequest = this; // add this line
     if(myRequest.readyState == 4) {
         if(myRequest.status == 200) {
         var now = new Date();
