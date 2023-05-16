@@ -9,6 +9,7 @@ function getXMLHttpRequest(){
         return new XMLHttpRequest();
     } 
 }
+var myRequest = getXMLHttpRequest();
 function callAjax(){
     var url = "clock.php";
     var myRandom = parseInt(Math.random()*99999999);
@@ -29,4 +30,3 @@ function responseAjax(){
         }
     }
 }
-var myRequest = getXMLHttpRequest();
