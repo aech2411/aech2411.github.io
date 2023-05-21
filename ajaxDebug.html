@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ajax Firebug</title>
+    </head>
+    <body>
+        <p>
+            I monitored Twitter with the Firebug tool and I noticed that there aren't a ton of rquests when I am just sitting in the page, 
+            but when I start scrolling in the feed there are a lot more of both GET and POST requests. I would assume that this is because 
+            as I scroll the feed, the site has to load more content continuously. All of the requests were marked with 200 status, so they
+            are all from the server instead of the cache. I also noticed that many of the requests were from pbs.twimg.com, which I assume
+            is where they store the images and video files, but every once in a while there will be a JSON request from the twitter api.
+        </p>
+    </body>
+</html>
