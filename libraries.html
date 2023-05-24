@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Library Usage</title>
+        <script src = prototype.js></script>
+        <script>
+            function checkprice() {
+                var myAjax = new Ajax.PeriodicalUpdater('price', 'rand.php', {method: 'post', frequency: 3.0, decay: 1});
+            }
+            window.onload = checkprice;
+        </script>
+    </head>
+    <body>
+        <div id = "price"></div>
+    </body>
+</html>
