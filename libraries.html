@@ -2,10 +2,14 @@
 <html>
     <head>
         <title>Library Usage</title>
-        <script src = prototype.js></script>
+        <script src = "prototype.js"></script>
         <script>
             function checkprice() {
-                var myAjax = new Ajax.PeriodicalUpdater('price', 'rand.php', {method: 'post', frequency: 3.0, decay: 1});
+                var myAjax = new Ajax.Updater('price', 'rand.php', {
+                    method: 'post', 
+                    frequency: 3.0, 
+                    decay: 1
+                });
             }
             window.onload = checkprice;
         </script>
