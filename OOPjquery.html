@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Oriented Programming</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function Card(suit, face) {
+            this.suit = suit;
+            this.setSuit = function (newSuit) {
+                this.suit = newSuit;
+            }       
+            this.face = face;
+            this.setFace = function (newFace) {
+                this.face = newFace;
+            }
+            this.showInfo = function () {
+                alert("This card is a(n) " + this.face + " of " + this.suit);
+            }
+        }
+        
+        $(document).ready(function () {
+            var card1 = new Card();
+            card1.setSuit("Diamonds");
+            card1.setFace("2");
+
+            var card2 = new Card();
+            card2.setSuit("Spades");
+            card2.setFace("Ace");
+
+            var card3 = new Card();
+            card3.setSuit("Clubs");
+            card3.setFace("King");
+
+            var card4 = new Card();
+            card4.setSuit("Hearts");
+            card4.setFace("Queen");
+
+            
+            $("#btnCard1").click(function () {
+                card1.showInfo();
+            });
+
+            $("#btnCard2").click(function () {
+                card2.showInfo();
+            });
+
+            $("#btnCard3").click(function () {
+                card3.showInfo();
+            });
+
+            $("#btnCard4").click(function () {
+                card4.showInfo();
+            });
+        });
+    </script>
+</head>
+<body>
+    <input id="btnCard1" type="button" value="Turn over card 1" />
+    <input id="btnCard2" type="button" value="Turn over card 2" />
+    <input id="btnCard3" type="button" value="Turn over card 3" />
+    <input id="btnCard4" type="button" value="Turn over card 4" />
+</body>
+</html>
