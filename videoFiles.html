@@ -33,11 +33,15 @@
             }
 
             function zoomIn(){
-                document.getElementById('demo').Zoom(50);
+                if (flashLoaded(document.getDocumentByIdgetElementById('demo'))){
+                    document.getElementById('demo').Zoom(50);
+                } 
             }
 
             function zoomOut(){
-                document.getElementById('demo').Zoom(200);
+                if (flashLoaded(document.getDocumentByIdgetElementById('demo'))){
+                    document.getElementById('demo').Zoom(200);
+                } 
             }
         </script>
     </head>
