@@ -31,6 +31,14 @@
                     document. getElementByld("rewind").onclick = rewind;
                 }  
             }
+
+            function zoomIn(){
+                document.getElementById('demo').Zoom(50);
+            }
+
+            function zoomOut(){
+                document.getElementById('demo').Zoom(200);
+            }
         </script>
     </head>
     <body>
@@ -44,6 +52,8 @@
             <input id="play" type="button" value="Start" />
             <input id="stop" type= "button" value="Stop" />
             <input id="rewind" type= "button" value="Rewind" />
+            <input id="zoomIn" type= "button" value="Zoom In" />
+            <input id="zoomOut" type= "button" value="Zoom Out" />
         </form>
     </body>
 </html>
