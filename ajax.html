@@ -8,12 +8,14 @@
             <script src = "ajax.js"></script>
             <script>
                 window.onload = function(){
-                    document.getElementById("btn1").onclick = callAjax;
+                    //document.getElementById("btn1").onclick = callAjax;
+                    callAjax();
+                    //var timer1 = setInterval("callAjax()",1000);
                 }
             </script>
         </head>
         <body>
-            <input id="btn1" type="button" value="Get Time" /><br />
+            <!--<input id="btn1" type="button" value="Get Time" /><br />-->
             <div id="clock"></div>
         </body>
     </html>

@@ -5,9 +5,9 @@
         <script src = "prototype.js"></script>
         <script>
             function checkprice() {
-                var myAjax = new Ajax.Updater('price', 'rand.php', {
+                var myAjax = new Ajax.PeriodicalUpdater('dice', 'rand.php', {
                     method: 'post', 
-                    frequency: 3.0, 
+                    frequency: 2.0, 
                     decay: 1
                 });
             }
@@ -15,6 +15,8 @@
         </script>
     </head>
     <body>
-        <div id = "price"></div>
+        <h2>D20 Roller</h2>
+        <p>You rolled a:</p>
+        <div id = "dice"></div>
     </body>
 </html>
