@@ -23,15 +23,15 @@
                 window.onload = function() {
                     var dragged = document.getElementById("drag1");
                     var drophere = document.getElementById("drop1");
-                    dragged.ondragstart = drag;
-                    drophere.ondragover = allowDrop;
-                    drophere.ondrop = drop;
+                    dragged.dragstart = drag;
+                    drophere.dragover = allowDrop;
+                    drophere.drop = drop;
                 }
             </script>
         </head>
         <body>
             <div id="drop1"></div>
             <p> Drag the image below into the box above:</p>
-            <img id="drag 1" src="drag.gif" draggable="true" />
+            <img id="drag1" src="drag.gif" draggable="true" />
         </body>
 </html>
