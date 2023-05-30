@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+                body {
+                    width:350px;
+                }
+                div {
+                    border: 1px solid black;
+                    padding: 20px;
+                    font: 20px normal helvetica, verdana, sans-serif;
+                }
+            </style>
+            <script>
+                function sayHello() {
+                    var message = document.createTextNode("Hello World!");
+                    var out = document.createElement("div");
+                    out.appendChild(message);
+                    document.body.appendChild(out);
+                }
+                window.onload = sayHello;
+            </script>
+        </head>
+        <body>
+        </body>
+    </html>
